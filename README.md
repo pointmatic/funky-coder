@@ -36,7 +36,11 @@
      source venv/bin/activate  # on macOS/Linux
      venv\Scripts\activate  # on Windows
      ```
-   - Install required dependencies if available (e.g., via requirements.txt).
+     or better yet, install `pyve` in your user (~) directory and let that handle the virtual environment for you (see https://github.com/pointmatic/pyve):
+     ```bash
+     ~/pyve.sh --init
+     ```
+   - Install required dependencies if available (e.g., via pyproject.toml).
 
 2. **Configuration:**
    - Create a `.env` file and set your OpenAI API key:
