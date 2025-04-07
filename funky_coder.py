@@ -617,7 +617,7 @@ def main():
     
     while True:
         if is_first_user_input:
-            show_help()
+            show_help(is_slang)
             is_first_user_input = False
             
         user_input = input("\nYou: ")
@@ -626,7 +626,7 @@ def main():
         if user_input.startswith(">"):
             command = user_input[1:].strip()
             if command.lower() == "help" or command.lower() == data["commands"]["help"]["slang"]:
-                show_help()
+                show_help(is_slang)
                 continue
             if command.lower() == "exit" or command.lower() == "quit" or command.lower() == data["commands"]["exit"]["slang"]:
                 break # exit the loop
